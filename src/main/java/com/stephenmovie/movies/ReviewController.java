@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "https://stephenmovieapp.vercel.app", maxAge = 3600)
+@CrossOrigin(origins = "https://stephenmovieapp.vercel.app")
 @RestController
 @RequestMapping("/api/v1/review")
 public class ReviewController {
