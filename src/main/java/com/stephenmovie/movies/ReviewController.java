@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "http://stephenmovieapp.vercel.app", maxAge = 3600)
+@CrossOrigin(origins = "https://stephenmovieapp.vercel.app", maxAge = 3600)
 @RestController
 @RequestMapping("/api/v1/review")
 public class ReviewController {
@@ -20,7 +20,7 @@ public class ReviewController {
     @PostMapping("/create")
     public ResponseEntity<Review> createReview(@RequestBody Map<String, String> payload){
         try{
-            return new ResponseEntity<Review>(reviewService.createReview(payload.get("reviewMessage"), payload.get("imdbId")),
+            return new ResponseEntity<>(reviewService.createReview(payload.get("reviewMessage"), payload.get("imdbId")),
                     HttpStatus.CREATED);
         }catch (Exception ex){
             throw new Error("Could not create review");
