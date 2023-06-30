@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+@CrossOrigin(origins = "http://stephenmovieapp.vercel.app", maxAge = 3600)
 @RestController
-@RequestMapping("/api/review")
+@RequestMapping("/api/v1/review")
 public class ReviewController {
     /**
      * AutoWired will automatically create an instance.
